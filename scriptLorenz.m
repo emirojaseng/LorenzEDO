@@ -2,6 +2,7 @@ CI=[0,1,0];
 param=[10,8/3,28];
 h=0.01;
 N=6000;
+a=5;
 [x,y,z,t]=lorenz_EDO(CI, param, h, N);
 plot3(x,y,z)
 title("Sistema de Lorenz");
@@ -13,7 +14,7 @@ clf;
 
 %%%
 A=animatedline('Color','b');
-axis([(min(x)-5) (max(x)+5) (min(y)-5) (max(y)+5) (min(z)-5) (max(z)+5)]);
+axis([(min(x)-a) (max(x)+a) (min(y)-a) (max(y)+a) (min(z)-a) (max(z)+a)]);
 title("Sistema de Lorenz");
 xlabel('x');
 ylabel('y');
@@ -42,7 +43,7 @@ clf;
 
 A=animatedline('Color','b');
 B=animatedline('Color','r');
-axis([(min(x)-5) (max(x)+5) (min(y)-5) (max(y)+5) (min(z)-5) (max(z)+5)]);
+axis([(min(x)-a) (max(x)+a) (min(y)-a) (max(y)+a) (min(z)-a) (max(z)+a)]);
 title("original vs perturbacion del 1%");
 xlabel('x');
 ylabel('y');
