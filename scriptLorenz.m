@@ -11,6 +11,7 @@ zlabel('z');
 pause
 clf;
 
+%%%
 A=animatedline('Color','b');
 axis([(min(x)-5) (max(x)+5) (min(y)-5) (max(y)+5) (min(z)-5) (max(z)+5)]);
 title("Sistema de Lorenz");
@@ -26,13 +27,13 @@ end
 pause
 
 clf;
-
+%%%
 
 CI=[0,1.01,0]; %condicion inicial diferente.
 
 [x2,y2,z2,t]=lorenz_EDO(CI, param, h, N);
 plot3(x,y,z,'Color', 'r');
-title("Perturbación del 1%");
+title("PerturbaciÃ³n del 1%");
 xlabel('x');
 ylabel('y');
 zlabel('z');
